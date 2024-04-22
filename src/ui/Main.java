@@ -22,7 +22,7 @@ public class Main {
     public static void main(String[] args) {
 
         CountryController countryController = new CountryController();
-        while(true) {
+        while (true) {
             System.out.println("");
             System.out.println("                                MENU                     ");
             System.out.println("=========================================================================");
@@ -45,7 +45,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println(Country.STRING_COUNTRY);
-                    System.out.println(countryController.displayAllCountry());
+                      countryController.displayAllCountry();
                     break;
                 case 3:
                     ArrayList<Country> listCountry = countryController.searchCountryByName();
@@ -53,8 +53,8 @@ public class Main {
                     for (Country country : listCountry) {
                         System.out.println(country);
                     }
-                break;
-                
+                    break;
+
                 case 4:
                     ArrayList<Country> listSort = countryController.displayAffterSort();
                     System.out.println(Country.STRING_COUNTRY);
@@ -62,11 +62,11 @@ public class Main {
                         System.out.println(country);
                     }
                     break;
-                case 5: 
+                case 5:
                     System.exit(5);
                     break;
             }
-            
+
         }
 
     }

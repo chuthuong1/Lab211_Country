@@ -24,22 +24,24 @@ public class CountryController {
         countryManager = new CountryManager();
     }
 
-    public Country addCountry() {
+    public Country addCountry() throws Exception {
         countryInputer = new CountryInputer();
         Country c = countryInputer.getInfoCountry();
         countryManager.addCountry(c);
         return c;
     }
 
-    public String displayAllCountry() {
-        return countryManager.toString();
-    }
-
     public ArrayList<Country> searchCountryByName() {
         String name = ValidationAndNormalizingTextUtils.getStringByRegex("search by name", "please name you want to search", "[a-zA-Z]+");
         return countryManager.searchCountryByName(name);
     }
-    public ArrayList<Country> displayAffterSort(){
+
+    public ArrayList<Country> displayAffterSort() {
         return countryManager.getListSortCountry();
     }
+
+    public void displayAllCountry() {
+        countryManager.displayAllCountry();
+    }
+
 }

@@ -16,7 +16,7 @@ public class Country implements Comparable<Country> {
     protected String countryCode;
     protected String countryName;
     protected float totalArea;
-    public static final String STRING_COUNTRY = String.format("%-10s %-25s %-25s %-25s\n", "code", "name", "total area", "terrain");
+    public static final String STRING_COUNTRY = String.format("%-10s %-20s %-20s %-20s\n", "code", "name", "total area", "terrain");
 
     public Country() {
     }
@@ -53,7 +53,7 @@ public class Country implements Comparable<Country> {
 
     @Override
     public String toString() {
-        return String.format("%-10s %-25s %-25.1f", countryCode, countryName, totalArea);
+        return String.format("%-10s %-20s %-20.1f", countryCode, countryName, totalArea);
     }
 
     @Override
